@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UniExam Maroc منصة مغربية لتنظيم ومشاركة الامتحانات والملخصات الجامعية حسب الجامعة والكلية والتخصص.">
+  <meta name="theme-color" content="#102a43">
+  <title>UniExam Maroc | الامتحانات الجامعية المغربية</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="UniExam Maroc الصفحة الرئيسية">
+      <span class="brand-mark">U<span>+</span></span>
+      <span><strong>UniExam</strong><small>MAROC</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a class="active" href="index.html">الرئيسية</a>
+      <a href="#exams">الامتحانات</a>
+      <a href="#fields">التخصصات</a>
+      <a href="about.html">من نحن</a>
+      <a class="nav-contact" href="contact.html">تواصل معنا</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="pulse"></span> منصتك للمراجعة الجامعية</span>
+      <h1>استعد لامتحاناتك<br><em>بثقة أكبر.</em></h1>
+      <p>اكتشف الامتحانات السابقة والموارد الدراسية الجامعية، ونظّم مراجعتك حسب الجامعة والكلية والتخصص.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#exams">تصفح الامتحانات <span>←</span></a>
+        <a class="btn btn-ghost" href="#fields">اكتشف التخصصات</a>
+      </div>
+      <div class="hero-note"><span class="check">✓</span> موارد منظمة للطلبة في الجامعات المغربية</div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <div class="paper paper-back"></div>
+      <div class="paper paper-front">
+        <div class="paper-top"><span>UNIVERSITY</span><span class="paper-dot"></span></div>
+        <div class="paper-title"></div><div class="paper-line wide"></div><div class="paper-line"></div>
+        <div class="paper-question"><b>01</b><span></span></div><div class="paper-line wide"></div>
+        <div class="paper-question"><b>02</b><span></span></div><div class="paper-line"></div>
+        <div class="paper-stamp">EXAM<br>ARCHIVE</div>
+      </div>
+      <div class="floating-tag tag-top">📚 <span>مكتبة منظمة</span></div>
+      <div class="floating-tag tag-bottom">✦ <span>تعلّم بذكاء</span></div>
+      <div class="hero-circle">U</div>
+    </div>
+  </div>
+  <div class="hero-bottom"><div class="container"><span>تعلم • راجع • تقدّم</span><span class="scroll-line"></span></div></div>
+</section>
+
+<section class="search-section">
+  <div class="container">
+    <div class="search-card">
+      <div class="search-heading"><div><span class="section-kicker">ابحث بسرعة</span><h2>شنو كتقلب عليه اليوم؟</h2></div><span class="search-icon">⌕</span></div>
+      <div class="search-controls">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="ابحث باسم المادة أو التخصص..." aria-label="ابحث عن امتحان"></label>
+        <select id="fieldFilter" aria-label="اختر التخصص"><option value="">جميع التخصصات</option><option>الاقتصاد والتدبير</option><option>العلوم القانونية</option><option>العلوم والتقنيات</option><option>الآداب والعلوم الإنسانية</option><option>علوم الحياة</option></select>
+        <button class="btn btn-primary search-button" id="searchButton">بحث</button>
+      </div>
+      <p class="search-hint">جرّب: الرياضيات، الاقتصاد، القانون، الفيزياء...</p>
+    </div>
+  </div>
+</section>
+
+<section class="section exams-section" id="exams">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="section-kicker">مكتبة الموارد</span><h2>آخر الامتحانات والموارد</h2><p>تصفح حسب المادة والتخصص، واستعمل البحث للوصول بسرعة.</p></div>
+      <span class="count-pill" id="resultCount">0 مورد</span>
+    </div>
+    <div class="filter-row">
+      <button class="filter-chip selected" data-filter="all">الكل</button>
+      <button class="filter-chip" data-filter="الاقتصاد والتدبير">الاقتصاد</button>
+      <button class="filter-chip" data-filter="العلوم القانونية">القانون</button>
+      <button class="filter-chip" data-filter="العلوم والتقنيات">العلوم والتقنيات</button>
+      <button class="filter-chip" data-filter="الآداب والعلوم الإنسانية">الآداب</button>
+    </div>
+    <div class="resource-grid" id="resourceGrid"></div>
+    <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>ما لقيناش نتائج</h3><p>جرّب كلمات أخرى أو اختار تخصص مختلف.</p></div>
+    <p class="demo-note">ملاحظة: المكتبة في هذه النسخة تجريبية. أضف ملفات الامتحانات الحقيقية وروابطها قبل نشر الموقع للطلبة.</p>
+  </div>
+</section>
+
+<section class="fields-section" id="fields">
+  <div class="container">
+    <div class="section-head light-head"><div><span class="section-kicker">تصفح حسب المجال</span><h2>اختار التخصص ديالك</h2><p>كلشي منظم باش تلقى الموارد اللي كتحتاج.</p></div></div>
+    <div class="field-grid">
+      <a class="field-card" href="#exams" data-field="الاقتصاد والتدبير"><span class="field-icon">↗</span><span class="field-num">01</span><h3>الاقتصاد والتدبير</h3><p>محاسبة، اقتصاد، تسيير...</p></a>
+      <a class="field-card" href="#exams" data-field="العلوم القانونية"><span class="field-icon">§</span><span class="field-num">02</span><h3>العلوم القانونية</h3><p>قانون خاص، عام، مدخل للعلوم...</p></a>
+      <a class="field-card" href="#exams" data-field="العلوم والتقنيات"><span class="field-icon">⌘</span><span class="field-num">03</span><h3>العلوم والتقنيات</h3><p>رياضيات، فيزياء، إعلاميات...</p></a>
+      <a class="field-card" href="#exams" data-field="الآداب والعلوم الإنسانية"><span class="field-icon">✳</span><span class="field-num">04</span><h3>الآداب والإنسانيات</h3><p>لغات، تاريخ، جغرافيا...</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container cta-box"><div><span class="section-kicker">عندك امتحان أو ملخص؟</span><h2>عاون طلبة آخرين يستافدو.</h2><p>شارك مواردك الدراسية بعد التأكد من حقك في نشرها.</p></div><a class="btn btn-light" href="contact.html">شارك معنا <span>←</span></a></div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-main">
+    <div class="footer-brand"><a class="brand brand-light" href="index.html"><span class="brand-mark">U<span>+</span></span><span><strong>UniExam</strong><small>MAROC</small></span></a><p>منصة مستقلة لمساعدة الطلبة على تنظيم المراجعة والوصول إلى الموارد الجامعية.</p></div>
+    <div><h4>روابط سريعة</h4><a href="#exams">الامتحانات</a><a href="#fields">التخصصات</a><a href="about.html">من نحن</a></div>
+    <div><h4>معلومات</h4><a href="privacy.html">سياسة الخصوصية</a><a href="terms.html">شروط الاستخدام</a><a href="contact.html">اتصل بنا</a></div>
+  </div>
+  <div class="container footer-bottom"><span>© <span id="year"></span> UniExam Maroc. جميع الحقوق محفوظة.</span><span>صُنع لخدمة الطلبة 🇲🇦</span></div>
+</footer>
+<script src="data.js"></script><script src="script.js"></script>
+</body></html>
